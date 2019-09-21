@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</head>
+
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+// ReactDOM.render(<div>Hello World</div>, document.getElementById("root"))
+     class HelloWorld extends React.Component{
+         render(){
+             
+             return <div>Hello World From Child {this.props.name + " " +  this.props.age}</div>
+
+         }
+     }
+
+     class Main extends React.Component{
+         render(){
+             return <div>
+             <HelloWorld name="Abdul Rafay Khan" age="24"/>
+             <div>han bhai</div>
+             </div>
+         }
+     }
+
+ 
+
+     let ele = document.getElementById("root");
+     ReactDOM.render(<Main/>,ele);
+
+    // const HelloWorld=()=>{
+    //             return <div>Welcome to React >= 16.8 </div>
+    //     }
+    //     let ele = document.getElementById("root");
+    //     ReactDOM.render(<HelloWorld />, document.getElementById("root"))
+
+
+     
+
+</script>
+</body>
+
+</html>
